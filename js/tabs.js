@@ -1,4 +1,4 @@
-export default function tabs () {
+ function tabs () {
 
 const tabsHandlerElems = document.querySelectorAll('[data-tabs-handler]');
 const tabsFieldElems = document.querySelectorAll('[data-tabs-field]');
@@ -42,10 +42,11 @@ tabsHandlerElems.forEach(tab => {
             if (title.classList.contains('hidden')){
                 title.classList.remove('hidden');
             }else{title.classList.add('hidden');}
-        })
-    })
+        });
+    });
     
-})
-
+});
 
 }
+
+export default tabs;

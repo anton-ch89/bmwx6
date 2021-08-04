@@ -1,6 +1,6 @@
 
 
-export default function smothScroll (SPEED = 0.5) {
+function smothScroll (SPEED = 0.5) {
     const scrolled = event => {
 
         const target = event.target;
@@ -38,7 +38,7 @@ export default function smothScroll (SPEED = 0.5) {
         
 }
 
-
+export default  smothScroll;
 
 // const smoothScrolElements = document.querySelectorAll('a[href^="#"]:not(a[href="#"])');
 
