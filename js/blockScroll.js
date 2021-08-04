@@ -1,11 +1,10 @@
-export default function blockScroll() {
 
-const disableScroll = () => {
-    document.body.dataset.scrollY = window.scrollY;
+     const disableScroll = () => {
+         document.body.dataset.scrollY = window.scrollY;
 
-    const scrollWidth = window.innerWidth - document.body.offsetWidth;
+         const scrollWidth = window.innerWidth - document.body.offsetWidth;
 
-    document.body.style.cssText = `
+         document.body.style.cssText = `
     overflow: hidden; 
     position: fixed; 
     top: -${window.scrollY}px;
@@ -14,13 +13,13 @@ const disableScroll = () => {
     height:100vh;
     padding-right: ${scrollWidth}px;
     `;
-};
+     };
 
-const enableScroll =() => {
-    document.body.style.cssText = ``;
-    window.scroll({
-        top:  document.body.dataset.scrollY
-    });
-};
+     const enableScroll = () => {
+         document.body.style.cssText = ``;
+         window.scroll({
+             top: document.body.dataset.scrollY
+         });
+     };
 
-}
+ export default { disableScroll, enableScroll };
